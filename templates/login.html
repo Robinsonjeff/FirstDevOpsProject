@@ -1,0 +1,24 @@
+{% extends "theme.html" %}
+{% block title %} Login Page {% endblock %}
+{% block content %}
+    
+    <div class="formcontainer">
+
+        <form method="POST" action="/login">
+            <label>Email:</label>
+            <input type="email" name="email">
+            <label>Password</label>
+            <input type="password" name="password">
+            <input type="submit" value="submit">
+        </form>
+
+    </div>
+    {% with messages = get_flashed_messages()%}
+        {% if messages %}
+            {% for msg in messages%}
+                <p>{{msg}}</p>
+            {%endfor%}
+        {%endif%}
+    {%endwith%}
+
+{% endblock %}
