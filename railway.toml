@@ -1,0 +1,2 @@
+[build]
+frontend = "flask --app simple_flask.py run"
