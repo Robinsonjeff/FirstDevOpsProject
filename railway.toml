@@ -1,2 +1,2 @@
 [build]
-frontend = "flask --app simple_flask.py run"
+frontend = "python simple_flask.py"
